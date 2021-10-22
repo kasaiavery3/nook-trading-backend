@@ -46,8 +46,8 @@ const axios = require('axios');
         itemData.image = image;
         console.log(itemData)
         itemResults.push(itemData);
-        console.log(itemResults)
       })
+      console.log(itemResults)
 
       // items.forEach(item => {
       //   console.log(data[item])
