@@ -60,7 +60,7 @@ module.exports = {
     */
 
     const items = await fetchData();
-    await queryInterface.bulkInsert('Item', items, {});
+    await queryInterface.bulkInsert('Items', items, {});
   },
 
   down: async (queryInterface, Sequelize) => {
@@ -70,6 +70,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    await queryInterface.bulkDelete('Item', null, {});
+    await queryInterface.bulkDelete('Items', null, {});
   }
 };
