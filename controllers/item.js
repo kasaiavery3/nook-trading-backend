@@ -29,7 +29,15 @@ router.get('/', async (req, res) => {
 
 // Get information on a specific item using its id
 router.get('/:id', async (req, res) => {
-
+    try {
+        const oneItem = await Item.findOne({
+            where: { id: req.params.id }
+        });
+        return res.status(200).json({message: "Success", item: oneItem})
+    } catch (error) {
+        console.log(error)
+        res.status(400).json({message: 'There was an error, please try again'})
+    }
 })
 
 
